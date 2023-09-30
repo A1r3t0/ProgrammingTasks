@@ -28,6 +28,17 @@ public class Task1 {
         System.out.println("Произведение введенных чисел: "+(a*b));
         System.out.println("Среднее арифметическое двух чисел: "+(((double) a+b)/2));
         System.out.println("Разность максимального и минимального: "+(max-min));
-
+        System.out.println(div(a,b));
     }
-} 
+
+    public static String div(int a, int b) {
+        if (b!=0) {
+            double result = 1.0*a / b;
+            String result1 = String.format("%.2f",result);
+            return "Частное введенных чисел (a/b) с точность до сотых: " + (result1);
+        }
+        else {
+            return "На ноль делить нельзя!";
+        }
+    }
+}  
